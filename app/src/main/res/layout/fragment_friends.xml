@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gohackathonteam.com.vgraphe.view.FriendsFragment">
+
+    <gohackathonteam.com.vgraphe.view.CircleLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/personPhoto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:border_color="@color/colorPrimaryDark"
+            app:border_width="2dp" />
+
+    </gohackathonteam.com.vgraphe.view.CircleLayout>
+
+</FrameLayout>
