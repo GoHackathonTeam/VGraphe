@@ -10,6 +10,7 @@ public class Person {
 
     public Bitmap getPhoto() {
         return photo;
+
     }
 
     public void setPhoto(Bitmap photo) {
