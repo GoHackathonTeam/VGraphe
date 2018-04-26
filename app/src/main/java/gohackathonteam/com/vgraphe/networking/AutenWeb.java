@@ -3,12 +3,15 @@ package gohackathonteam.com.vgraphe.networking;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import gohackathonteam.com.vgraphe.InitActivity;
 
 import static android.content.ContentValues.TAG;
 
@@ -39,12 +42,14 @@ class AutenWeb extends WebViewClient {
     {
         Log.i(TAG, "shouldOverrideUrlLoading() URL : " + url);
 
+        System.out.println(url);
+
         if (url.matches(".*access_token=.*")) {
             String ACCES_TOKEN = url.substring(45, 130);
             String ID = url.substring(156, 165);
-            //Intent intent = new Intent(context, .class);
-            //intent.putExtra("token", ACCES_TOKEN).putExtra("id", ID);
-            //context.startActivity(intent);
+//            Intent intent = new Intent(context, InitActivity.class);
+//            intent.putExtra("token", ACCES_TOKEN).putExtra("id", ID);
+//            context.startActivity(intent);
         }
 
         return false;

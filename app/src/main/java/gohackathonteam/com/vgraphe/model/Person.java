@@ -6,37 +6,28 @@ public class Person {
     private Bitmap photo;
     private String name;
     private String surname;
-    private String id;
+    private int id;
+
+    public Person(int id, String name, String surname, Bitmap photo){
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.photo = photo;
+    }
 
     public Bitmap getPhoto() {
         return photo;
-    }
-
-    public void setPhoto(Bitmap photo) {
-        this.photo = photo;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSurname() {
         return surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public String getId() {
+    public int getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 }

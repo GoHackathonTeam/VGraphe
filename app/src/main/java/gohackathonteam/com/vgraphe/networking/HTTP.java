@@ -19,9 +19,10 @@ import java.util.concurrent.BlockingQueue;
 
 import static android.content.ContentValues.TAG;
 
+
 public class HTTP {
     static BlockingQueue<Runnable> request = new ArrayBlockingQueue<Runnable>(100);
-    static MyThread secThread = new MyThread(request);
+//    static MyThread secThread = new MyThread(request);
 
 
 
@@ -30,7 +31,7 @@ public class HTTP {
     }
 
     @Nullable
-    public static JsonReader getJSON(String url) {
+    public static JsonReader get(String url) {
         HttpURLConnection connection = null;
 
         try {
@@ -59,20 +60,18 @@ public class HTTP {
         return null;
     }
 
-    public static ArrayList<Bitmap> getImageBitmap(ArrayList<String> URL) {
-        ArrayList<Bitmap> bm = new ArrayList<>();
+    public static Bitmap getImageBitmap(String URL) {
+        Bitmap bm = null;
         try {
             URL aURL;
-            for (String url : URL) {
-                aURL = new URL(url);
+                aURL = new URL(URL);
                 URLConnection conn = aURL.openConnection();
                 conn.connect();
                 InputStream is = conn.getInputStream();
                 BufferedInputStream bis = new BufferedInputStream(is);
-                bm.add(BitmapFactory.decodeStream(bis));
+                bm = BitmapFactory.decodeStream(bis);
                 bis.close();
                 is.close();
-            }
         } catch (IOException e) {
             Log.e(TAG, "Error getting bitmap", e);
         }
