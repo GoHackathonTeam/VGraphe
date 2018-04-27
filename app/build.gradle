@@ -33,6 +33,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'de.hdodenhof:circleimageview:1.1.0'
 }
+
 repositories {
     mavenCentral()
 }
+
+apply plugin: 'kotlin-android-extensions'

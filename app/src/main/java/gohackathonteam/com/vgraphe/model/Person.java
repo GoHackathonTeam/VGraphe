@@ -6,9 +6,9 @@ public class Person {
     private Bitmap photo;
     private String name;
     private String surname;
-    private int id;
+    private String id;
 
-    public Person(int id, String name, String surname, Bitmap photo){
+    public Person(String id, String name, String surname, Bitmap photo){
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -27,7 +27,7 @@ public class Person {
         return surname;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 }

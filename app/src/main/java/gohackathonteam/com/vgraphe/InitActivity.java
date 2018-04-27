@@ -12,8 +12,7 @@ public class InitActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        proceed();
-
+       proceed();
     }
 
     private void proceed() {

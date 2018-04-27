@@ -13,7 +13,7 @@ public class Friends {
 
     public static ArrayList<Person> personParse(JsonReader json) throws IOException {
         ArrayList<Person> person = new ArrayList<>();
-        int id = 0;
+        String id = "";
         String name = null;
         String surname = null;
         Bitmap photo = null;
@@ -30,7 +30,7 @@ public class Friends {
             while (json.hasNext()) {
                 switch (json.nextName()){
                     case "id":
-                        id = json.nextInt();
+                        id = json.nextString();
                         break;
                     case "first_name":
                         name = json.nextString();

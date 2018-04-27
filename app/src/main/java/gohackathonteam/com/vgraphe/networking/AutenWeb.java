@@ -47,9 +47,9 @@ class AutenWeb extends WebViewClient {
         if (url.matches(".*access_token=.*")) {
             String ACCES_TOKEN = url.substring(45, 130);
             String ID = url.substring(156, 165);
-//            Intent intent = new Intent(context, InitActivity.class);
-//            intent.putExtra("token", ACCES_TOKEN).putExtra("id", ID);
-//            context.startActivity(intent);
+            Intent intent = new Intent(context, Object.class);
+            intent.putExtra("token", ACCES_TOKEN).putExtra("id", ID);
+            context.startActivity(intent);
         }
 
         return false;
