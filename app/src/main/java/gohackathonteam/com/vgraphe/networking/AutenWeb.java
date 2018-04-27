@@ -18,6 +18,8 @@ import static android.content.ContentValues.TAG;
 class AutenWeb extends WebViewClient {
 
     Context context;
+    String TOKEN;
+    String ID;
 
     AutenWeb(Context context){
         this.context = context;
@@ -45,10 +47,10 @@ class AutenWeb extends WebViewClient {
         System.out.println(url);
 
         if (url.matches(".*access_token=.*")) {
-            String ACCES_TOKEN = url.substring(45, 130);
-            String ID = url.substring(156, 165);
+            TOKEN = url.substring(45, 130);
+            ID = url.substring(156, 165);
             Intent intent = new Intent(context, Object.class);
-            intent.putExtra("token", ACCES_TOKEN).putExtra("id", ID);
+            intent.putExtra("token", TOKEN).putExtra("id", ID);
             context.startActivity(intent);
         }
 

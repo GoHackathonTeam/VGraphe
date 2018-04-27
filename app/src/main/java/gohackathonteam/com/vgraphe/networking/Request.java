@@ -37,7 +37,7 @@ public class Request implements VKApi {
 
     @Override
     public void getFriends(Person person, SimpleCallback<Collection<Person>> callback) {
-        String url = "https://api.vk.com/method/friends.get?user_id=" + person.getId() + "&order=hints&fields=photo_50&v=5.74";
+        String url = "https://api.vk.com/method/friends.get?user_id=" + person.getId() + "&fields=photo_50&v=5.74";
 
         try {
             HTTP.lamda(() -> {
